@@ -1,5 +1,5 @@
-import { MagnifyingGlassIcon,HeartIcon, ShoppingBagIcon, UserCircleIcon, BookOpenIcon } from '@heroicons/react/24/outline'
-
+import { MagnifyingGlassIcon, HeartIcon, ShoppingBagIcon, UserCircleIcon, BookOpenIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
 function NavBar() {
     return (
         <>
@@ -7,8 +7,10 @@ function NavBar() {
                 <div>
                     <ul className="text-white flex ">
                         <li className="px-3 flex">
-                        <BookOpenIcon className='text-white-200 h-6'/>
-                        Bookstore
+                            <Link to='/' className="px-3 flex"><BookOpenIcon className='text-white-200 h-6' />
+                                Bookstore
+                            </Link>
+
                         </li>
                         <li className="px-3 catDropDown">
                             <p className="linkx ">Categories</p>
@@ -33,10 +35,6 @@ function NavBar() {
                                 <a href="/">Teen Fiction</a>
                                 <a href="/">Thriller</a>
                                 <a href="/">Werewolf</a>
-
-
-
-
                                 <div>
                                 </div>
                             </div>
@@ -53,14 +51,15 @@ function NavBar() {
                 </div>
                 <div>
                     <ul className="text-white flex ">
+                        <li><Link to="/login">LOGIN</Link> </li>
                         <li className="px-3">
-                            <UserCircleIcon className='text-white-200 h-6'/>
+                            <UserCircleIcon className='text-white-200 h-6' />
                         </li>
                         <li className="px-3">
-                            <HeartIcon className='text-white-200 h-6'/>
+                            <HeartIcon className='text-white-200 h-6' />
                         </li>
                         <li className="px-3">
-                            <ShoppingBagIcon className='text-white-200 h-6'/>
+                            <ShoppingBagIcon className='text-white-200 h-6' />
                         </li>
                     </ul>
                 </div>
