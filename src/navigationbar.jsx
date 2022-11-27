@@ -1,6 +1,9 @@
 import { MagnifyingGlassIcon, HeartIcon, ShoppingBagIcon, UserCircleIcon, BookOpenIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
-function NavBar() {
+import { auth } from './firebase/utils';
+function NavBar(props) {
+    const { currentUser } = props;
+    console.log(currentUser);
     return (
         <>
             <div className="relative flex h-16 items-center justify-between bg-gray-900 px-20">
@@ -50,11 +53,20 @@ function NavBar() {
                     </div>
                 </div>
                 <div>
-                    <ul className="text-white flex ">
-                        <li><Link to="/login">LOGIN</Link> </li>
-                        <li className="px-3">
-                            <UserCircleIcon className='text-white-200 h-6' />
-                        </li>
+                    <ul className="text-white flex">
+                        {!currentUser ?
+                            <>
+                                <li className='px-3'><Link to="/login">LOGIN</Link> </li>
+                                <li><Link to="/register">Register</Link> </li>
+                            </>
+                            :
+                            <li className="flex">
+                                <UserCircleIcon className='text-white-200 h-6 px-3' />
+                                <span onClick={() => auth.signOut()}>Logout</span>
+                            </li>
+                        }
+
+
                         <li className="px-3">
                             <HeartIcon className='text-white-200 h-6' />
                         </li>
@@ -66,5 +78,8 @@ function NavBar() {
             </div>
         </>
     )
+};
+NavBar.defaultProps = {
+    currentUser: null
 }
 export default NavBar;

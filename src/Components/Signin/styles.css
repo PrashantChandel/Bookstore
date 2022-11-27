@@ -1,0 +1,29 @@
+.signin {
+  display: block;
+  width: 100%;
+  max-width: 25rem;
+  margin: 4rem auto 6rem;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+}
+.img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+.heading {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+}
+
+/* .socialSignin {
+  margin: 3rem auto 0;
+} */
