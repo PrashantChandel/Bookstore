@@ -1,0 +1,15 @@
+.drop-menu {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  color: black;
+  background: rgb(255, 255, 255);
+  position: Absolute;
+  display: none;
+  width: fit-content;
+}
+.drop-menu > a {
+  display: block;
+}
+.catDropDown:hover .drop-menu {
+  display: block;
+}

@@ -5,6 +5,7 @@ import NavBar from './navigationbar';
 import Login from './Pages/Login/login';
 import './App.css';
 import Registration from './Pages/Registeration/Registeration';
+import Recovery from './Pages/Recovery/Recovery';
 
 const initialState = {
   currentUser: null
@@ -48,6 +49,8 @@ class App extends Component {
         <Routes>
           <Route exact path='/login' element={currentUser ? <Navigate to='/' /> : <Login currentUser={currentUser} />} />
           <Route exact path='/register' element={currentUser ? <Navigate to='/' /> : <Registration />} />
+          <Route exact path='/recovery' element={<Recovery />} />
+
         </Routes>
       </div>
     );

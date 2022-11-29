@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css';
-import Buttons from '../forms/Button/button';
-import { signInWithGoogle } from './../../firebase/utils';
+import Button from '../forms/Button/button';
+// import { signInWithGoogle } from './../../firebase/utils';
 import Library from '../../content/Library.jpg'
 import FormInput from '../forms/Input/input';
 import { auth, handleUserProfile } from './../../firebase/utils';
@@ -101,9 +101,9 @@ class SignUp extends Component {
                                 onChange={this.handleChange}
                             />
                             <div className="socialSignin">
-                                <Buttons>
+                                <Button>
                                     Register
-                                </Buttons>
+                                </Button>
                             </div>
                         </form>
                     </div>

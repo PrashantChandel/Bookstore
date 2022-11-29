@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
+import { Link } from 'react-router-dom';
 import Buttons from '../forms/Button/button';
 import { auth, signInWithGoogle } from './../../firebase/utils';
 import Library from '../../content/Library.jpg'
@@ -30,7 +31,7 @@ class SignIn extends Component {
             this.setState(initalState)
         }
         catch (err) {
-
+            //console.log(err);
         }
     }
 
@@ -62,12 +63,19 @@ class SignIn extends Component {
                             <Buttons type="submit">
                                 Login
                             </Buttons>
+                            <div className='px-2 pb-1'>
+                                <Link to="/recovery">Forget Password </Link>
+                                |
+                                <Link to="/register"> Register New User</Link>
+                                
+                            </div>
                             <hr />
                             <div className="socialSignin">
                                 <Buttons onClick={signInWithGoogle}>
                                     Sign in with Google
                                 </Buttons>
                             </div>
+
                         </form>
                     </div>
                 </div>

@@ -1,14 +1,14 @@
-import { signInWithGoogle } from "../../firebase/utils";
+// import { signInWithGoogle } from "../../firebase/utils";
 import SignIn from "../../Components/Signin/Signin";
 
 export default function login(props) {
 
-    const handleclick = (e) => {
-        e.preventDefault()
-        console.log("Here")
-        signInWithGoogle();
+    // const handleclick = (e) => {
+    //     e.preventDefault()
+    //     console.log("Here")
+    //     signInWithGoogle();
 
-    }
+    // }
     return (
         <>
             {/* <div className="flex justify-center wrapper bg-slate-50 ">
